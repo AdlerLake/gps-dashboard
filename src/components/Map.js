@@ -25,7 +25,7 @@ function RecenterMap({ lat, lon }) {
   return null;
 }
 
-export default function GPSMap({ lat, lon, status }) {
+export default function GPSMap({ busid, time, lat, lon, status }) {
   return (
     <div
       style={{
@@ -66,10 +66,14 @@ export default function GPSMap({ lat, lon, status }) {
           zIndex: 1000, 
         }}
       >
+        <b>Bus:</b> {busid}
+        <br/>
+        <b>Time:</b> {time}
+        <br/>
         <b>Latitude:</b> {lat}
-        <br />
+        <br/>
         <b>Longitude:</b> {lon}
-        <br />
+        <br/>
         <b>Status:</b> {status}
       </div>
     </div>
